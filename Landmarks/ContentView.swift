@@ -11,17 +11,21 @@ import SwiftUI
 // First structure conforms to View structure and describes the view's content and layout
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+        VStack (alignment: .leading) {
             Text("Turtle Rock")
                 .font(.title)
-                
-        }
+                .foregroundColor(Color.green)
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
+            } //HSack
+        } //VStack
         .padding()
-    }
-}
+    } //View
+} //ContentView
 
 // Second structure declares a preview for that View
 struct ContentView_Previews: PreviewProvider {
